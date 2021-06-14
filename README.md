@@ -12,18 +12,26 @@ This a all in one git cheat sheet. From installation to uploading your project i
 
 ### Connecting Git and GitHub with SSH
 
+- Install Git in your local machine.
+
+  To check git version
+
+      git --version
+
+<br>
+
 - Install OpenSSH Client & OpenSSH Server.
+
+  ![ssh key](apps.png)
+
 - Generate SSH key.
-- Copy ssh key from C:\Users\Username\\.ssh\id_rsa.pub.
-- Paste it into your GitHub account and give it a title.
-
-![ssh key](apps.png)
-
-To generate ssh key :
 
 ```
 ssh-keygen
 ```
+
+- Copy ssh key from C:\Users\Username\\.ssh\id_rsa.pub.
+- Paste it into your GitHub account and give it a title.
 
 <br>
 
@@ -40,11 +48,6 @@ ssh-keygen
 
 <br>
 
-to check git version
-
-    git --version
-
-<br>
 <a name="local"></a>
 
 ### Creating local git repository
@@ -85,14 +88,6 @@ To see changes and tracking info :
 
 <br>
 
-To see the changes :
-
-    git diff
-
-###### Diff command is used in git to track the difference between the changes made on a file
-
-<br>
-
 To see info of previous commits :
 
     git log
@@ -107,11 +102,22 @@ To see summary of previous commits (Heads) :
 
 <br>
 
-To see specific commits :
-
-    git show commitid
+### Resetting Commits & vice versa
 
 <br>
+
+remove and back to specific commit :
+
+    git reset --hard commitid
+
+###### Never reset after pushing commits
+
+<br>
+
+accidental removed later commits now want them back :
+
+    git reset HEAD@{number}
+    git reset --hard
 
 <br>
 
@@ -125,103 +131,13 @@ To get back to any previous commit :
 
 <br>
 
-To get back to last commits :
+To get back to latest commits :
 
     git checkout master/main
 
 <br>
 
-### Back and forth of specific file of commits
-
-<br>
-
-To get back to any specific file of previous commit :
-
-    git checkout commitid filename
-
-<br>
-
-To get back to any specific file of last commit :
-
-    git checkout master/main -f
-
-<br>
-
-### Resetting Commits
-
-<br>
-
-remove and back to specific commit :
-
-    git reset --hard commitid
-
-###### Never reset after pushing commits
-
-<br>
-
-accidental remove :
-
-    git reset HEAD@{number}
-    git reset --hard
-
-<br>
-
-Amend to previous commit :
-
-    git commit --amend
-
-<br>
-
-### Git Stash (temporary save) and Clean
-
-<br>
-
-Git stash (clean pwd) :
-
-    git stash
-
-###### git stash when you want to record the current state of the working directory and the index, but want to go back to a clean working directory
-
-<br>
-
-Return to Git stash :
-
-    git stash pop/apply
-
-<br>
-
-Return to specific Git stash :
-
-    git stash pop/apply stash@{number}
-
-<br>
-
-See stash list :
-
-    git stash list
-
-<br>
-
-Delete all stash :
-
-    git stash clear
-
-<br>
-
-Delete all untracked files :
-
-    git clean -f -n
-    git clean -f
-
-<br>
-
-### Git push clone
-
-<br>
-
-Cloning git repo from web :
-
-    git clone url
+### Git push, pull and clone
 
 <br>
 
@@ -231,15 +147,19 @@ Adding remote :
 
 <br>
 
-See all remote list :
+Pull from github :
 
-    git remote show
+    git pull origin(any name) master(branch name)
 
 <br>
 
-See remote url :
+Cloning git repo from web :
 
-    git remote show origin(any name)
+    git clone url
+
+###### clone: copying the remote server repository to your local machine.
+
+###### pull: get new changes other have added to your local machine. This is the difference. Clone is generally used to get remote repo copy.
 
 <br>
 
@@ -249,23 +169,19 @@ Uploading into github :
 
 <br>
 
-Pull from github :
-
-    git pull origin(any name) master(branch name)
+### git branch create, switch, merge, delete
 
 <br>
 
-### git ignore file
+create a new branch :
+
+    git branch branchname
 
 <br>
 
-Creating .gitignore file :
+switching branches :
 
-![gitignore](gitignore.png)
-
-<br>
-
-### git merge
+    git checkout branchname
 
 <br>
 
@@ -287,20 +203,18 @@ delete a remote branch :
 
 <br>
 
-show all local branch :
-
-    git branch
-
-<br>
-
-show all remote branch :
-
-    git branch -r
-
-<br>
-
 show all remote and local branch :
 
     git branch -a
+
+<br>
+
+### git ignore file
+
+<br>
+
+Creating .gitignore file :
+
+![gitignore](gitignore.png)
 
 <br>
