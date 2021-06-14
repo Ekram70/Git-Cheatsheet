@@ -1,35 +1,33 @@
-# Git Cheatsheet
+# Git Cheat sheet
 
-This a all in one git cheatsheet. From installation to uploading your project into GitHub all common commands are listed here.
-
+This a all in one git cheat sheet. From installation to uploading your project into GitHub all common commands are listed here.
 
 ## Table of Content
 
 1. [Connecting Git and GitHub with SSH](#ssh)
 2. [Understanding Git](#git)
-2. [Creating local git repository](#local)
-
+3. [Creating local git repository](#local)
 
 <a name="ssh"></a>
 
 ### Connecting Git and GitHub with SSH
 
-+ Install OpenSSH Client & OpenSSH Server.
-+ Generate SSH key.
-+ Copy ssh key from C:\Users\Username\.ssh\id_rsa.pub.
-+ Paste it into your GitHub account and give it a title.
+- Install OpenSSH Client & OpenSSH Server.
+- Generate SSH key.
+- Copy ssh key from C:\Users\Username\\.ssh\id_rsa.pub.
+- Paste it into your GitHub account and give it a title.
 
 ![ssh key](apps.png)
 
->To generate ssh key :
+To generate ssh key :
 
 ```
 ssh-keygen
 ```
+
 <br>
 
 ![add to github](ssh.png)
-
 
 <br>
 <a name="git"></a>
@@ -38,11 +36,13 @@ ssh-keygen
 
 <br>
 
-> to check git version
+![git](git.png)
+
+<br>
+
+to check git version
 
     git --version
-
-
 
 <br>
 <a name="local"></a>
@@ -51,23 +51,23 @@ ssh-keygen
 
 <br>
 
-> To initialize empty git repository :
-    
-    git init
+To initialize empty git repository :
 
+    git init
 
 <br>
 
-> To add files for tracking :
+To add files for tracking :
 
     git add .
 
 ###### tracked - a file which has been previously staged or committed;
+
 ###### untracked - a file which has not been staged or committed; or
 
 <br>
 
-> To record the changes :
+To record the changes :
 
     git commit -m "message"
 
@@ -77,7 +77,7 @@ ssh-keygen
 
 <br>
 
-> To see changes and tracking info :
+To see changes and tracking info :
 
     git status
 
@@ -85,7 +85,7 @@ ssh-keygen
 
 <br>
 
-> To see the changes :
+To see the changes :
 
     git diff
 
@@ -93,25 +93,23 @@ ssh-keygen
 
 <br>
 
-> To see info of previous commits :
+To see info of previous commits :
 
     git log
 
-###### The Git Log tool allows you to view information about previous commits that have occurred in a projec
+###### The Git Log tool allows you to view information about previous commits that have occurred in a project
 
 <br>
 
-> To see summary of previous commits (Heads) :
+To see summary of previous commits (Heads) :
 
     git reflog
 
-
 <br>
 
-> To see specific commits :
+To see specific commits :
 
     git show commitid
-
 
 <br>
 
@@ -121,18 +119,15 @@ ssh-keygen
 
 <br>
 
-> To get back to any previous commit :
+To get back to any previous commit :
 
     git checkout commitid
 
-
 <br>
 
-
-> To get back to last commits :
+To get back to last commits :
 
     git checkout master/main
-
 
 <br>
 
@@ -140,16 +135,15 @@ ssh-keygen
 
 <br>
 
-> To get back to any specific file of previous commit :
+To get back to any specific file of previous commit :
 
     git checkout commitid filename
 
 <br>
 
-> To get back to any specific file of last commit :
+To get back to any specific file of last commit :
 
     git checkout master/main -f
-
 
 <br>
 
@@ -157,7 +151,7 @@ ssh-keygen
 
 <br>
 
-> remove and back to specific commit :
+remove and back to specific commit :
 
     git reset --hard commitid
 
@@ -165,17 +159,16 @@ ssh-keygen
 
 <br>
 
-> accidental remove :
+accidental remove :
 
     git reset HEAD@{number}
     git reset --hard
 
 <br>
 
-> Amend to previous commit :
+Amend to previous commit :
 
-    git commit --adend
-
+    git commit --amend
 
 <br>
 
@@ -183,7 +176,7 @@ ssh-keygen
 
 <br>
 
-> Git stash (clean pwd) :
+Git stash (clean pwd) :
 
     git stash
 
@@ -191,31 +184,31 @@ ssh-keygen
 
 <br>
 
-> Return to Git stash :
+Return to Git stash :
 
     git stash pop/apply
 
 <br>
 
-> Return to specific Git stash :
+Return to specific Git stash :
 
     git stash pop/apply stash@{number}
 
 <br>
 
-> See stash list :
+See stash list :
 
     git stash list
 
 <br>
 
-> Delete all stash :
+Delete all stash :
 
     git stash clear
 
 <br>
 
-> Delete all untracked files :
+Delete all untracked files :
 
     git clean -f -n
     git clean -f
@@ -226,40 +219,37 @@ ssh-keygen
 
 <br>
 
-> Cloning git repo from web :
+Cloning git repo from web :
 
     git clone url
 
 <br>
 
-> Adding remote :
+Adding remote :
 
     git remote add origin(any name) url
 
 <br>
 
-
-> See all remote list :
+See all remote list :
 
     git remote show
 
 <br>
 
-
-> See remote url :
+See remote url :
 
     git remote show origin(any name)
 
 <br>
 
-
-> Uploading into github :
+Uploading into github :
 
     git push origin(any name) master(branch name)
 
 <br>
 
-> Pull from github :
+Pull from github :
 
     git pull origin(any name) master(branch name)
 
@@ -269,20 +259,48 @@ ssh-keygen
 
 <br>
 
-> Creating .gitignore file :
-
+Creating .gitignore file :
 
 ![gitignore](gitignore.png)
 
 <br>
 
-
 ### git merge
 
 <br>
 
-> mergin other branch to current branch :
+merging other branch to current branch :
 
     git merge (other branch name)
+
+<br>
+
+delete a local branch :
+
+    git branch -d BranchName
+
+<br>
+
+delete a remote branch :
+
+    git push origin(any name) --delete BranchName
+
+<br>
+
+show all local branch :
+
+    git branch
+
+<br>
+
+show all remote branch :
+
+    git branch -r
+
+<br>
+
+show all remote and local branch :
+
+    git branch -a
 
 <br>
