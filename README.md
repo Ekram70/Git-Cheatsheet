@@ -2,6 +2,8 @@
 
 This a all in one git cheat sheet. From installation to uploading your project into GitHub all common commands are listed here.
 
+Version control, also known as source control, is the practice of tracking and managing changes to software code. Version control systems are software tools that help software teams manage changes to source code over time.
+
 ## Table of Content
 
 1. [Connecting Git and GitHub with SSH](#ssh)
@@ -45,6 +47,13 @@ ssh-keygen
 <br>
 
 ![git](git.png)
+
+<br>
+
+### Adding User id and email
+
+    git config --global user.name "Your Name"
+    git config --global user.email "youremail@yourdomain.com"
 
 <br>
 
