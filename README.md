@@ -101,6 +101,12 @@ To see info of previous commits :
 
     git log
 
+<br>
+
+To see info of previous commits in one line:
+
+    git log --oneline
+
 ###### The Git Log tool allows you to view information about previous commits that have occurred in a project
 
 <br>
@@ -112,6 +118,8 @@ To see summary of previous commits (Heads) :
 <br>
 
 ### Resetting Commits & vice versa
+
+![reset](reset.png)
 
 <br>
 
