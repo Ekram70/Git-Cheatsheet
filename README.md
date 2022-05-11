@@ -69,6 +69,12 @@ To initialize empty git repository :
 
 <br>
 
+To initialize empty git repository with branch name:
+
+    git init -b branchName
+
+<br>
+
 To add files for tracking :
 
     git add .
